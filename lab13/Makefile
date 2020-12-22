@@ -1,4 +1,4 @@
-targets = lab11.bin
+targets = lab13.bin
 CC = gcc
 C_OPTS = -std=gnu11 -g -Wall -Wextra -Wformat-security -Wfloat-equal -Wshadow -Wconversion -Wlogical-not-parentheses -Wnull-dereference -I.src
 
@@ -8,11 +8,11 @@ clean:
 	rm -rf dist
 prep:
 	mkdir dist
-compile: lab11.bin
-lab11.bin: src/lab11.c
+compile: lab13.bin
+lab13.bin: src/lab13.c
 	$(CC) $(C_OPTS) $< -o ./dist/$@ 
 run: clean prep compile
-	./dist/lab11.c
+	./dist/lab13.c
 doxygen:
 	doxygen Doxyfile
 format: #TODO
